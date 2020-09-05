@@ -22,8 +22,8 @@ class ExamHistory(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.PROTECT, null=True)
     pacient = models.ForeignKey(Pacient, on_delete=models.PROTECT)
     lab = models.CharField(max_length=255, null=True)
-    img = models.ImageField(null=True)
-    file = models.FileField(null=True)
+    img = models.ImageField(null=True, upload_to='appointments/exam/img')
+    file = models.FileField(null=True, upload_to='appointments/exam/file')
     date = models.DateField()
 
     class Meta:

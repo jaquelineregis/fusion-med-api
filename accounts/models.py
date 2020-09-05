@@ -4,7 +4,7 @@ from django.db import models
 
 class Person(models.Model):
     # user = models.OneToOneField(User, on_delete=models.CASCADE)
-    img_profile = models.ImageField()
+    img_profile = models.ImageField(upload_to='accounts/profile')
     name = models.CharField(max_length=255)
     cpf = models.CharField(max_length=255, blank=True)
     email = models.EmailField()
