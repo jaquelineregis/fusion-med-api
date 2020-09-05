@@ -19,15 +19,15 @@ from django.contrib import admin
 from django.urls import path, include
 
 apis = [
-    path('accounts/', include('accounts.api.urls')),
-    path('appointments/', include('appointments.api.urls')),
+    path("accounts/", include("accounts.api.urls")),
+    path("appointments/", include("appointments.api.urls")),
 ]
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include(apis)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path("admin/", admin.site.urls),
+    path("api/", include(apis)),
+    path("api-auth/", include("rest_framework.urls")),
 ]
 
 if settings.DEBUG:
-  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

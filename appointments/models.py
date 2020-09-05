@@ -27,7 +27,7 @@ class ExamHistory(models.Model):
     date = models.DateField()
 
     class Meta:
-        verbose_name_plural = 'ExamHistories'
+        verbose_name_plural = "ExamHistories"
 
     def __str__(self):
         return str(self.id)

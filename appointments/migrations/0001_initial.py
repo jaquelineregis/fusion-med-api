@@ -9,30 +9,71 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('accounts', '0001_initial'),
+        ("accounts", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='ExamHistory',
+            name="ExamHistory",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('lab', models.CharField(max_length=255, null=True)),
-                ('img', models.ImageField(null=True, upload_to='')),
-                ('file', models.FileField(null=True, upload_to='')),
-                ('date', models.DateField()),
-                ('doctor', models.ForeignKey(null=True, on_delete=django.db.models.deletion.PROTECT, to='accounts.Doctor')),
-                ('pacient', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='accounts.Pacient')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("lab", models.CharField(max_length=255, null=True)),
+                ("img", models.ImageField(null=True, upload_to="")),
+                ("file", models.FileField(null=True, upload_to="")),
+                ("date", models.DateField()),
+                (
+                    "doctor",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to="accounts.Doctor",
+                    ),
+                ),
+                (
+                    "pacient",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to="accounts.Pacient",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Appointment',
+            name="Appointment",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('date', models.DateTimeField()),
-                ('exams', models.TextField()),
-                ('doctor', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='accounts.Doctor')),
-                ('pacient', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='accounts.Pacient')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("date", models.DateTimeField()),
+                ("exams", models.TextField()),
+                (
+                    "doctor",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to="accounts.Doctor",
+                    ),
+                ),
+                (
+                    "pacient",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        to="accounts.Pacient",
+                    ),
+                ),
             ],
         ),
     ]

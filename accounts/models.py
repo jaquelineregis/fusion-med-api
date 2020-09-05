@@ -16,7 +16,7 @@ class Person(models.Model):
     emergency_contact_name = models.CharField(max_length=255, blank=True)
     address = models.CharField(max_length=255, blank=True)
     blood_type = models.CharField(max_length=255, blank=True)
-    password = models.CharField(max_length=255, default='123456')
+    password = models.CharField(max_length=255, default="123456")
 
     def __str__(self):
         return self.name

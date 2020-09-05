@@ -9,7 +9,7 @@ class AppointmentViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.AppointmentSerializer
 
     def get_serializer_class(self):
-        if self.action in ['get', 'list']:
+        if self.action in ["retrieve", "list"]:
             return serializers.AppointmentDescriptionSerializer
         return serializers.AppointmentSerializer
 
@@ -19,6 +19,6 @@ class ExamHistoryViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.ExamHistorySerializer
 
     def get_serializer_class(self):
-        if self.action in ['get', 'list']:
-            return serializers.AppointmentDescriptionSerializer
-        return serializers.AppointmentSerializer
+        if self.action in ["retrieve", "list"]:
+            return serializers.ExamHistoryDescriptionSerializer
+        return serializers.ExamHistorySerializer
