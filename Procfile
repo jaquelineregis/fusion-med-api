@@ -1,1 +1,1 @@
-web: gunicorn fusion-med.wsgi
+web: gunicorn fusionmed.wsgi
