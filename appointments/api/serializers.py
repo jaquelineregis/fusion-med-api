@@ -1,12 +1,12 @@
 from rest_framework import serializers
 
-from accounts.api.serializers import DoctorSerializer, PacientSerializer
+from accounts.api.serializers import DoctorSingleDescriptionSerializer, PacientSingleDescriptionSerializer
 from appointments import models
 
 
 class AppointmentDescriptionSerializer(serializers.ModelSerializer):
-    doctor = DoctorSerializer()
-    pacient = PacientSerializer()
+    doctor = DoctorSingleDescriptionSerializer()
+    pacient = PacientSingleDescriptionSerializer()
 
     class Meta:
         model = models.Appointment
@@ -20,8 +20,8 @@ class AppointmentSerializer(serializers.ModelSerializer):
 
 
 class ExamHistoryDescriptionSerializer(serializers.ModelSerializer):
-    doctor = DoctorSerializer()
-    pacient = PacientSerializer()
+    doctor = DoctorSingleDescriptionSerializer()
+    pacient = PacientSingleDescriptionSerializer()
     
     class Meta:
         model = models.ExamHistory

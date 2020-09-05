@@ -13,3 +13,15 @@ class PacientSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Pacient
         fields = '__all__'
+
+
+class DoctorSingleDescriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Doctor
+        fields = ['name', 'crm', 'occupation_area']
+
+
+class PacientSingleDescriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Pacient
+        fields = ['name', 'card_number']
