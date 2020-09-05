@@ -7,11 +7,11 @@ class Appointment(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.PROTECT)
     pacient = models.ForeignKey(Pacient, on_delete=models.PROTECT)
     date = models.DateTimeField()
-    exams = models.TextField()  # should be a ManyToMany
+    exams = models.TextField(blank=True)  # should be a ManyToMany
     # exams = models.ManyToManyField('Exam')
 
     def __str__(self):
-        return str(self.id)
+        return str(self.date)
 
 
 # class Exam(models.Model):
