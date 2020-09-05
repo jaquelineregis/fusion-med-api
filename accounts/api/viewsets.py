@@ -1,3 +1,4 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
 
 from accounts import models
@@ -13,4 +14,5 @@ class DoctorViewSet(viewsets.ModelViewSet):
 class PacientViewSet(viewsets.ModelViewSet):
     queryset = models.Pacient.objects.all()
     serializer_class = serializers.PacientSerializer
-    filter_fields = ('card_number')
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['card_number']

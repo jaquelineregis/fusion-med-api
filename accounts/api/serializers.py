@@ -18,10 +18,10 @@ class PacientSerializer(serializers.ModelSerializer):
 class DoctorSingleDescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Doctor
-        fields = ['name', 'crm', 'occupation_area']
+        fields = ['id', 'name', 'crm', 'occupation_area']
 
 
 class PacientSingleDescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Pacient
-        fields = ['name', 'card_number']
+        fields = ['id', 'name', 'card_number']
