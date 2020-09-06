@@ -4,7 +4,7 @@ from django.db import models
 
 class Person(models.Model):
     # user = models.OneToOneField(User, on_delete=models.CASCADE)
-    img_profile = models.ImageField(upload_to='accounts/profile')
+    img_profile = models.ImageField(upload_to="accounts/profile")
     name = models.CharField(max_length=255)
     cpf = models.CharField(max_length=255, blank=True)
     email = models.EmailField()
@@ -20,6 +20,10 @@ class Person(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def birth_date_f(self):
+        return self.birth_date.strftime("%d/%m/%Y")
 
 
 class Doctor(Person):

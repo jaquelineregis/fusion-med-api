@@ -10,6 +10,7 @@ from appointments import models
 class AppointmentDescriptionSerializer(serializers.ModelSerializer):
     doctor = DoctorSingleDescriptionSerializer()
     pacient = PacientSingleDescriptionSerializer()
+    date_f = serializers.DateTimeField(read_only=True)
 
     class Meta:
         model = models.Appointment
@@ -25,6 +26,7 @@ class AppointmentSerializer(serializers.ModelSerializer):
 class ExamHistoryDescriptionSerializer(serializers.ModelSerializer):
     doctor = DoctorSingleDescriptionSerializer()
     pacient = PacientSingleDescriptionSerializer()
+    date_f = serializers.DateField(read_only=True)
 
     class Meta:
         model = models.ExamHistory
