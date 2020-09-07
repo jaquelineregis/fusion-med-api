@@ -1,5 +1,8 @@
 # fusion-med-api
 
+### API URL
+* https://fusion-med.herokuapp.com/
+
 ### Steps to run
 
 ##### Terminal
