@@ -6,6 +6,9 @@
 ### API URL
 * https://fusion-med.herokuapp.com/api/
 
+### Admin URL
+* https://fusion-med.herokuapp.com/admin/
+
 ### Steps to run
 
 ##### Terminal
