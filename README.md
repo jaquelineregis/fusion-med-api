@@ -16,7 +16,7 @@
 #### Links URL (youtube, figma, github)
 * https://fusion-med.herokuapp.com/links/
 
-#### Steps to run
+### Steps to run
 
 ##### Terminal
 * touch **.env**
