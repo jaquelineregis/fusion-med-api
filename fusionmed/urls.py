@@ -29,7 +29,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include(apis)),
     path('', TemplateView.as_view(template_name="langing_page.html")),
-    path('prontuario/', TemplateView.as_view(template_name="prontuario.html")),
+    path('links/', TemplateView.as_view(template_name="links.html")),
     path("api-auth/", include("rest_framework.urls")),
 ]
 
