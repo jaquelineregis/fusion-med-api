@@ -1,13 +1,20 @@
 # fusion-med-api
 
-### Landing Page
+### Oficial API in Heroku
+
+#### Landing Page
 * https://fusion-med.herokuapp.com/
 
-### API URL
+#### API URL
 * https://fusion-med.herokuapp.com/api/
 
-### Admin URL
+#### Admin URL
 * https://fusion-med.herokuapp.com/admin/
+  - username: fusionmed
+  - password: fusionmed
+
+#### Links URL (youtube, figma, github)
+* https://fusion-med.herokuapp.com/links/
 
 ### Steps to run
 
