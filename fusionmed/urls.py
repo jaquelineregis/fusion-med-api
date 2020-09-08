@@ -20,7 +20,7 @@ from django.views.generic import TemplateView
 from django.urls import path, include
 
 apis = [
-    path('/', TemplateView.as_view(template_name="api_links.html")),
+    path('', TemplateView.as_view(template_name="api_links.html")),
     path("accounts/", include("accounts.api.urls")),
     path("appointments/", include("appointments.api.urls")),
 ]
