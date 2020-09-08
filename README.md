@@ -1,7 +1,10 @@
 # fusion-med-api
 
-### API URL
+### Landing Page
 * https://fusion-med.herokuapp.com/
+
+### API URL
+* https://fusion-med.herokuapp.com/api/
 
 ### Steps to run
 
