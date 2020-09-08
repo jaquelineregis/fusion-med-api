@@ -10,6 +10,8 @@
 
 #### Admin URL
 * https://fusion-med.herokuapp.com/admin/
+- username: fusionmed
+- password: fusionmed
 
 #### Links URL (youtube, figma, github)
 * https://fusion-med.herokuapp.com/links/
