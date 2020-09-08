@@ -20,7 +20,7 @@ from django.views.generic import TemplateView
 from django.urls import path, include
 
 apis = [
-    path('', TemplateView.as_view(template_name="api_links.html")),
+    path("", TemplateView.as_view(template_name="api_links.html")),
     path("accounts/", include("accounts.api.urls")),
     path("appointments/", include("appointments.api.urls")),
 ]
@@ -28,11 +28,11 @@ apis = [
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include(apis)),
-    path('', TemplateView.as_view(template_name="langing_page.html")),
-    path('links/', TemplateView.as_view(template_name="links.html")),
+    path("", TemplateView.as_view(template_name="langing_page.html")),
+    path("links/", TemplateView.as_view(template_name="links.html")),
     path("api-auth/", include("rest_framework.urls")),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
