@@ -1,17 +1,17 @@
 # fusion-med-api
 
-## Oficial API in Heroku
+### Oficial API in Heroku
 
-### Landing Page
+#### Landing Page
 * https://fusion-med.herokuapp.com/
 
-### API URL
+#### API URL
 * https://fusion-med.herokuapp.com/api/
 
-### Admin URL
+#### Admin URL
 * https://fusion-med.herokuapp.com/admin/
 
-### Steps to run
+#### Steps to run
 
 ##### Terminal
 * touch **.env**
